@@ -1,5 +1,4 @@
-const password = "admin123"; // Change this for security
-
+const password = "admin123";
 document.getElementById("login-form").addEventListener("submit", function (e) {
     e.preventDefault();
     if (document.getElementById("password").value === password) {
@@ -15,7 +14,6 @@ document.getElementById("upload-form").addEventListener("submit", function (e) {
     let formData = new FormData();
     formData.append("category", document.getElementById("category").value);
     formData.append("image", document.getElementById("imageFile").files[0]);
-
     fetch("upload.php", { method: "POST", body: formData })
         .then(response => response.json())
         .then(data => alert(data.message));
