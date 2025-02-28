@@ -1,0 +1,12 @@
+{
+    "services": [
+        "images/service1.jpg",
+        "images/service2.jpg",
+        "images/service3.jpg"
+    ],
+    "projects": [
+        "images/project1.jpg",
+        "images/project2.jpg",
+        "images/project3.jpg"
+    ]
+}
