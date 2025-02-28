@@ -1,12 +1,8 @@
 {
     "services": [
-        "images/service1.jpg",
-        "images/service2.jpg",
-        "images/service3.jpg"
+        "isaac_img1.jpg", "isaac_img2.jpg", "isaac_img3.jpg"
     ],
     "projects": [
-        "images/project1.jpg",
-        "images/project2.jpg",
-        "images/project3.jpg"
+        "isaac_img10.jpg", "isaac_img11.jpg", "isaac_img12.jpg"
     ]
 }
