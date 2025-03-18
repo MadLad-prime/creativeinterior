@@ -51,6 +51,18 @@
             background: rgba(0, 0, 0, 0.5); /* Dark overlay for better text visibility */
         }
 
+        /* Added gradient overlay to transition to header */
+        .hero::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -20px;
+            height: 40px;
+            background: linear-gradient(to bottom, transparent, #13274F);
+            z-index: 1;
+        }
+
         .hero-content {
             position: relative;
             z-index: 1;
@@ -69,11 +81,22 @@
 
         /* Header Section */
         header {
+            position: relative; /* added for pseudo-element positioning */
             text-align: center;
             padding: 20px;
             background: #13274F; /* navy blue background */
             color: white; /* white text */
             border-bottom: 1px solid #222;
+        }
+
+        header::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -20px;
+            height: 20px;
+            background: linear-gradient(to bottom, #13274F, white);
         }
 
         #profile-image {
@@ -94,12 +117,14 @@
             color: white; /* ensure header text is white */
         }
 
+        /* Menu Button Changes */
         #menu-button {
             color: white;
             background: transparent;
-            border: 1px solid white;
-            padding: 5px 10px;
-            font-size: 1.2rem;
+            border: none; /* removed rectangle border */
+            padding: 10px 15px; /* bigger button */
+            font-size: 1.5rem;  /* increased size for better visibility */
+            font-weight: bold;  /* thicker appearance */
             cursor: pointer;
         }
 
