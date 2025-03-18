@@ -71,13 +71,14 @@
         header {
             text-align: center;
             padding: 20px;
-            background: #f9f9f9;
-            border-bottom: 1px solid #ddd;
+            background: #000080; /* navy blue background */
+            color: white; /* white text */
+            border-bottom: 1px solid #222;
         }
 
         #profile-image {
-            width: 100px;
-            height: 100px;
+            width: 150px; /* increased size for better visibility */
+            height: 150px;
             border-radius: 50%;
             margin: 10px auto;
         }
@@ -85,11 +86,21 @@
         .header-content h2 {
             font-size: 1.8rem;
             margin: 10px 0;
+            color: white; /* ensure header text is white */
         }
 
         .header-content p {
             font-size: 1rem;
-            color: #666;
+            color: white; /* ensure header text is white */
+        }
+
+        #menu-button {
+            color: white;
+            background: transparent;
+            border: 1px solid white;
+            padding: 5px 10px;
+            font-size: 1.2rem;
+            cursor: pointer;
         }
 
         /* Services and Projects Sections */
