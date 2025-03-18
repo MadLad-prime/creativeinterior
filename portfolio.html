@@ -5,6 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Good Isaac Home Concepts</title>
     <link rel="stylesheet" href="styles_v6.css">
+    <style>
+        @media only screen and (max-width: 600px) {
+            /* Make images responsive and clear */
+            img {
+                width: 100%;
+                height: auto;
+                border: none;
+            }
+            /* Single column project grid */
+            .project-grid {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+            /* Apply a thin border and remove excess framing */
+            .project-grid div {
+                border: 1px solid #ccc;
+                box-shadow: none;
+                padding: 0;
+                margin: 0;
+            }
+            /* Enhance header appearance on mobile */
+            header, .header-content {
+                text-align: center;
+                padding: 10px;
+            }
+            /* Responsive video thumbnail */
+            .video-thumbnail {
+                width: 100%;
+                max-width: 100%;
+            }
+        }
+        /* Lightbox styles */
+        #lightbox {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.8);
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+        }
+        #lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+        }
+    </style>
 </head>
 <body>
     <!-- Header Section -->
@@ -84,6 +131,111 @@
             <img src="images/isaac_img14.jpg" alt="Image 14">
             <p>Contemporary shoe rack</p>
         </div>
+        <!-- Added new image slots from 21 to 46 with blank names -->
+        <div>
+            <img src="images/isaac_img21.jpg" alt="Image 21">
+            <p></p>
+        </div>
+        <div>
+            <img src="images/isaac_img22.jpg" alt="Image 22">
+            <p></p>
+        </div>
+        <div>
+            <img src="images/isaac_img23.jpg" alt="Image 23">
+            <p></p>
+        </div>
+        <div>
+            <img src="images/isaac_img24.jpg" alt="Image 24">
+            <p></p>
+        </div>
+        <div>
+            <img src="images/isaac_img25.jpg" alt="Image 25">
+            <p></p>
+        </div>
+        <div>
+            <img src="images/isaac_img26.jpg" alt="Image 26">
+            <p></p>
+        </div>
+        <div>
+            <img src="images/isaac_img27.jpg" alt="Image 27">
+            <p></p>
+        </div>
+        <div>
+            <img src="images/isaac_img28.jpg" alt="Image 28">
+            <p></p>
+        </div>
+        <div>
+            <img src="images/isaac_img29.jpg" alt="Image 29">
+            <p></p>
+        </div>
+        <div>
+            <img src="images/isaac_img30.jpg" alt="Image 30">
+            <p></p>
+        </div>
+        <div>
+            <img src="images/isaac_img31.jpg" alt="Image 31">
+            <p></p>
+        </div>
+        <div>
+            <img src="images/isaac_img32.jpg" alt="Image 32">
+            <p></p>
+        </div>
+        <div>
+            <img src="images/isaac_img33.jpg" alt="Image 33">
+            <p></p>
+        </div>
+        <div>
+            <img src="images/isaac_img34.jpg" alt="Image 34">
+            <p></p>
+        </div>
+        <div>
+            <img src="images/isaac_img35.jpg" alt="Image 35">
+            <p></p>
+        </div>
+        <div>
+            <img src="images/isaac_img36.jpg" alt="Image 36">
+            <p></p>
+        </div>
+        <div>
+            <img src="images/isaac_img37.jpg" alt="Image 37">
+            <p></p>
+        </div>
+        <div>
+            <img src="images/isaac_img38.jpg" alt="Image 38">
+            <p></p>
+        </div>
+        <div>
+            <img src="images/isaac_img39.jpg" alt="Image 39">
+            <p></p>
+        </div>
+        <div>
+            <img src="images/isaac_img40.jpg" alt="Image 40">
+            <p></p>
+        </div>
+        <div>
+            <img src="images/isaac_img41.jpg" alt="Image 41">
+            <p></p>
+        </div>
+        <div>
+            <img src="images/isaac_img42.jpg" alt="Image 42">
+            <p></p>
+        </div>
+        <div>
+            <img src="images/isaac_img43.jpg" alt="Image 43">
+            <p></p>
+        </div>
+        <div>
+            <img src="images/isaac_img44.jpg" alt="Image 44">
+            <p></p>
+        </div>
+        <div>
+            <img src="images/isaac_img45.jpg" alt="Image 45">
+            <p></p>
+        </div>
+        <div>
+            <img src="images/isaac_img46.jpg" alt="Image 46">
+            <p></p>
+        </div>
     </div>
 </section>
 
@@ -120,5 +272,25 @@
     <!-- Removed Footer Section -->
 
     <script src="scripts_p1.js"></script>
+    <!-- Lightbox modal container -->
+    <div id="lightbox" onclick="closeLightbox()">
+        <img id="lightbox-img" src="" alt="Full view">
+    </div>
+    <!-- Lightbox functionality script -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.querySelectorAll("img").forEach(function(img) {
+                img.addEventListener("click", function(event) {
+                    // Skip images within the video section
+                    if (this.closest("#video")) return;
+                    document.getElementById("lightbox-img").src = this.src;
+                    document.getElementById("lightbox").style.display = "flex";
+                });
+            });
+        });
+        function closeLightbox() {
+            document.getElementById("lightbox").style.display = "none";
+        }
+    </script>
 </body>
 </html>
