@@ -7,15 +7,15 @@
     <link rel="stylesheet" href="styles_v6.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        /* CSS for Video and Image Boxes */
-        .project-grid {
+        /* CSS for Services and Projects Sections */
+        .services-grid, .project-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 20px;
             margin: 20px 0;
         }
 
-        .project-grid div {
+        .services-grid li, .project-grid div {
             border: 1px solid #ccc;
             border-radius: 10px;
             overflow: hidden;
@@ -24,8 +24,7 @@
             background-color: #f9f9f9;
         }
 
-        .project-grid img,
-        .project-grid video {
+        .services-grid img, .project-grid img, .project-grid video {
             width: 100%;
             max-width: 100%;
             height: auto;
@@ -33,7 +32,7 @@
             display: block;
         }
 
-        .project-grid p {
+        .services-grid p, .project-grid p {
             margin: 10px 0 0;
             font-size: 16px;
             font-weight: bold;
@@ -65,10 +64,19 @@
     <!-- Services Section -->
     <section id="services">
         <h2>Our Services</h2>
-        <ul>
-            <li><img id="services-0" class="cache-bust" src="images/isaac_img11.jpg" alt="Custom Bookshelf and Study Table."><p>Custom Bookshelf and Study Table.</p></li>
-            <li><img id="services-1" class="cache-bust" src="images/isaac_img6.jpg" alt="Renovation - Design and Installation of Wardrobes."><p>Renovation - Design and Installation of Wardrobes.</p></li>
-            <li><img id="services-2" class="cache-bust" src="images/isaac_img14.jpg" alt="Design of Contemporary Shoe Rack."><p>Design of Contemporary Shoe Rack.</p></li>
+        <ul class="services-grid">
+            <li>
+                <img id="services-0" class="cache-bust" src="images/isaac_img11.jpg" alt="Custom Bookshelf and Study Table.">
+                <p>Custom Bookshelf and Study Table.</p>
+            </li>
+            <li>
+                <img id="services-1" class="cache-bust" src="images/isaac_img6.jpg" alt="Renovation - Design and Installation of Wardrobes.">
+                <p>Renovation - Design and Installation of Wardrobes.</p>
+            </li>
+            <li>
+                <img id="services-2" class="cache-bust" src="images/isaac_img14.jpg" alt="Design of Contemporary Shoe Rack.">
+                <p>Design of Contemporary Shoe Rack.</p>
+            </li>
         </ul>
     </section>
 
@@ -94,7 +102,7 @@
             <!-- Video 1 -->
             <div>
                 <video controls class="cache-bust">
-                    <source src="vides/v3.mp4" type="video/mp4">
+                    <source src="vides/v2.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
                 <p>Iron Board Station (Video)</p>
@@ -110,7 +118,7 @@
             <!-- Video 3 -->
             <div>
                 <video controls class="cache-bust">
-                    <source src="vides/v2.mp4" type="video/mp4">
+                    <source src="vides/v3.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
                 <p>Cupboard (Video)</p>
@@ -135,7 +143,7 @@
 
         // Ensure videos and images are responsive
         window.addEventListener("resize", function () {
-            document.querySelectorAll(".project-grid video, .project-grid img").forEach(media => {
+            document.querySelectorAll(".services-grid img, .project-grid img, .project-grid video").forEach(media => {
                 media.style.width = "100%";
                 media.style.height = "auto";
             });
