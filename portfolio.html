@@ -93,81 +93,115 @@
 <section id="projects">
     <h2>Latest Projects</h2>
     <div class="project-grid">
-        <!-- Existing project images -->
+        <!-- Updated project card 1 -->
         <div>
             <img src="images/isaac_img3.jpg" alt="Image 3">
             <p>Wardrobe</p>
+            <button class="contact-button" data-project="Wardrobe">I'm Interested</button>
         </div>
+        <!-- Updated project card 2 -->
         <div>
             <img src="images/isaac_img5.jpg" alt="Image 5">
             <p>Wardrobe</p>
+            <button class="contact-button" data-project="Wardrobe">I'm Interested</button>
         </div>
+        <!-- Updated project card 3 -->
         <div>
             <img src="images/isaac_img6.jpg" alt="Image 6">
             <p>Wardrobe</p>
+            <button class="contact-button" data-project="Wardrobe">I'm Interested</button>
         </div>
+        <!-- Updated project card 4 -->
         <div>
             <img src="images/isaac_img7.jpg" alt="Image 7">
             <p>Wardrobe</p>
+            <button class="contact-button" data-project="Wardrobe">I'm Interested</button>
         </div>
+        <!-- Updated project card 5 -->
         <div>
             <img src="images/isaac_img9.jpg" alt="Image 9">
             <p>Wardrobe</p>
+            <button class="contact-button" data-project="Wardrobe">I'm Interested</button>
         </div>
+        <!-- Updated project card 6 -->
         <div>
             <img src="images/isaac_img2.jpg" alt="Image 2">
             <p>Wardrobe</p>
+            <button class="contact-button" data-project="Wardrobe">I'm Interested</button>
         </div>
+        <!-- Updated project card 7 -->
         <div>
             <img src="images/isaac_img11.jpg" alt="Image 11">
-            <p>bookshelf and study table</p>
+            <p>Bookshelf and Study Table</p>
+            <button class="contact-button" data-project="Bookshelf and Study Table">I'm Interested</button>
         </div>
+        <!-- Updated project card 8 -->
         <div>
             <img src="images/isaac_img12.jpg" alt="Image 12">
-            <p>dress table</p>
+            <p>Dress Table</p>
+            <button class="contact-button" data-project="Dress Table">I'm Interested</button>
         </div>
-        <!-- New project image -->
+        <!-- Updated project card 9 -->
         <div>
             <img src="images/isaac_img14.jpg" alt="Image 14">
-            <p>Contemporary shoe rack</p>
+            <p>Contemporary Shoe Rack</p>
+            <button class="contact-button" data-project="Contemporary Shoe Rack">I'm Interested</button>
         </div>
-        <!-- Added new image slots from 21 to 46 with blank names -->
+        <!-- Updated project card 10 -->
         <div>
             <img src="images/isaac_img21.jpg" alt="Image 21">
-            <p></p>
+            <p>Project 21</p>
+            <button class="contact-button" data-project="Project 21">I'm Interested</button>
         </div>
+        <!-- Updated project card 11 -->
         <div>
             <img src="images/isaac_img22.jpg" alt="Image 22">
-            <p></p>
+            <p>Project 22</p>
+            <button class="contact-button" data-project="Project 22">I'm Interested</button>
         </div>
+        <!-- Updated project card 12 -->
         <div>
             <img src="images/isaac_img23.jpg" alt="Image 23">
-            <p></p>
+            <p>Project 23</p>
+            <button class="contact-button" data-project="Project 23">I'm Interested</button>
         </div>
+        <!-- Updated project card 13 -->
         <div>
             <img src="images/isaac_img24.jpg" alt="Image 24">
-            <p></p>
+            <p>Project 24</p>
+            <button class="contact-button" data-project="Project 24">I'm Interested</button>
         </div>
+        <!-- Updated project card 14 -->
         <div>
             <img src="images/isaac_img25.jpg" alt="Image 25">
-            <p></p>
+            <p>Project 25</p>
+            <button class="contact-button" data-project="Project 25">I'm Interested</button>
         </div>
+        <!-- Updated project card 15 -->
         <div>
             <img src="images/isaac_img26.jpg" alt="Image 26">
-            <p></p>
+            <p>Project 26</p>
+            <button class="contact-button" data-project="Project 26">I'm Interested</button>
         </div>
+        <!-- Updated project card 16 -->
         <div>
             <img src="images/isaac_img27.jpg" alt="Image 27">
-            <p></p>
+            <p>Project 27</p>
+            <button class="contact-button" data-project="Project 27">I'm Interested</button>
         </div>
+        <!-- Updated project card 17 -->
         <div>
             <img src="images/isaac_img28.jpg" alt="Image 28">
-            <p></p>
+            <p>Project 28</p>
+            <button class="contact-button" data-project="Project 28">I'm Interested</button>
         </div>
+        <!-- Updated project card 18 -->
         <div>
             <img src="images/isaac_img29.jpg" alt="Image 29">
-            <p></p>
+            <p>Project 29</p>
+            <button class="contact-button" data-project="Project 29">I'm Interested</button>
         </div>
+        <!-- Remaining project cards remain unchanged -->
         <div>
             <img src="images/isaac_img30.jpg" alt="Image 30">
             <p></p>
@@ -236,6 +270,10 @@
             <img src="images/isaac_img46.jpg" alt="Image 46">
             <p></p>
         </div>
+        <div>
+            <img src="images/isaac_img47.jpg" alt="Image 47">
+            <p></p>
+        </div>
     </div>
 </section>
 
@@ -292,5 +330,54 @@
             document.getElementById("lightbox").style.display = "none";
         }
     </script>
+    <script>
+    // Open modal when a contact button is clicked
+    document.querySelectorAll(".contact-button").forEach(function(button) {
+        button.addEventListener("click", function(event) {
+            const projectName = event.target.getAttribute("data-project");
+            document.getElementById("project-name").value = projectName;
+            document.getElementById("contact-modal").style.display = "flex";
+        });
+    });
+
+    // Close the modal
+    function closeContactModal() {
+        document.getElementById("contact-modal").style.display = "none";
+    }
+
+    // Handle form submission
+    function sendInterest(event) {
+        event.preventDefault();
+
+        const name = document.getElementById("user-name").value;
+        const phone = document.getElementById("user-phone").value;
+        const project = document.getElementById("project-name").value;
+        const message = `${name} (Phone: ${phone}) is interested in the project: ${project}`;
+
+        // Using mailto to open the user's email client
+        window.location.href = `mailto:azuresky01010@gmail.com?subject=Project Interest: ${encodeURIComponent(project)}&body=${encodeURIComponent(message)}`;
+
+        // Reset the form and close the modal
+        document.getElementById("contact-form").reset();
+        closeContactModal();
+    }
+</script>
+<!-- Modal Contact Form -->
+    <div id="contact-modal" class="modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); align-items:center; justify-content:center; z-index:1001;">
+        <div class="modal-content" style="background:#fff; padding:20px; border-radius:5px; width:90%; max-width:400px; position:relative;">
+            <span class="close-button" onclick="closeContactModal()" style="position:absolute; top:10px; right:15px; cursor:pointer; font-size:20px;">&times;</span>
+            <h2>Contact Us</h2>
+            <form id="contact-form" onsubmit="sendInterest(event)">
+                <input type="hidden" id="project-name" name="project">
+                <label for="user-name">Name:</label>
+                <input type="text" id="user-name" name="name" required style="width:100%; margin-bottom:10px;">
+                
+                <label for="user-phone">Phone:</label>
+                <input type="tel" id="user-phone" name="phone" required style="width:100%; margin-bottom:10px;">
+                
+                <button type="submit" style="width:100%;">Send Interest</button>
+            </form>
+        </div>
+    </div>
 </body>
 </html>
