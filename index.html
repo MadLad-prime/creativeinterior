@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Good Isaac Home Concepts</title>
-    <link rel="stylesheet" href="styles_v6.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         /* General Styles */
@@ -82,7 +81,7 @@
         .call-us-button {
             position: absolute;
             top: 20px;
-            left: 20px;
+            right: 20px;
             background: #13274F;
             color: white;
             padding: 10px 20px;
@@ -164,7 +163,7 @@
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 20px;
-            padding: 20px 0;
+            padding: 20px;
         }
 
         .services-grid li, .project-grid div {
@@ -188,6 +187,29 @@
             margin: 10px 0 0;
             font-size: 16px;
             font-weight: bold;
+        }
+
+        /* Video Section */
+        .video-thumbnail {
+            position: relative;
+            cursor: pointer;
+            margin: 20px auto;
+            max-width: 800px;
+        }
+
+        .video-thumbnail img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .play-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 4rem;
+            color: white;
+            opacity: 0.8;
         }
 
         /* Footer Section */
@@ -249,7 +271,7 @@
 
     <!-- Header Section -->
     <header>
-        <img id="profile-image" class="cache-bust" src="gihc.png" alt="profile">
+        <img id="profile-image" src="gihc.png" alt="profile">
         <div class="header-content">
             <h2>Good Isaac Home Concepts</h2>
             <p>Welcome to Good Isaac Home Concepts, we specialize in all types of exterior and interior finishes, design and installation of contemporary kitchen cabinets, wardrobes, office furniture.</p>
@@ -274,15 +296,15 @@
         <h2>Our Services</h2>
         <ul class="services-grid">
             <li>
-                <img id="services-0" class="cache-bust" src="images/isaac_img11.jpg" alt="Custom Bookshelf and Study Table.">
+                <img src="images/isaac_img11.jpg" alt="Custom Bookshelf and Study Table.">
                 <p>Custom Bookshelf and Study Table.</p>
             </li>
             <li>
-                <img id="services-1" class="cache-bust" src="images/isaac_img6.jpg" alt="Renovation - Design and Installation of Wardrobes.">
+                <img src="images/isaac_img6.jpg" alt="Renovation - Design and Installation of Wardrobes.">
                 <p>Renovation - Design and Installation of Wardrobes.</p>
             </li>
             <li>
-                <img id="services-2" class="cache-bust" src="images/isaac_img14.jpg" alt="Design of Contemporary Shoe Rack.">
+                <img src="images/isaac_img14.jpg" alt="Design of Contemporary Shoe Rack.">
                 <p>Design of Contemporary Shoe Rack.</p>
             </li>
         </ul>
@@ -294,22 +316,22 @@
         <div class="project-grid">
             <!-- Image 1 -->
             <div>
-                <img id="projects-0" class="cache-bust" src="images/isaac_img16.jpg" alt="Iron Board Station">
+                <img src="images/isaac_img16.jpg" alt="Iron Board Station">
                 <p>Iron Board Station</p>
             </div>
             <!-- Image 2 -->
             <div>
-                <img id="projects-1" class="cache-bust" src="images/isaac_img17.jpg" alt="Cabinet">
+                <img src="images/isaac_img17.jpg" alt="Cabinet">
                 <p>Cabinet</p>
             </div>
             <!-- Image 3 -->
             <div>
-                <img id="projects-2" class="cache-bust" src="images/isaac_img18.jpg" alt="Cupboard">
+                <img src="images/isaac_img18.jpg" alt="Cupboard">
                 <p>Cupboard</p>
             </div>
             <!-- Video 1 -->
             <div>
-                <video controls class="cache-bust">
+                <video controls>
                     <source src="vides/v1.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
@@ -317,7 +339,7 @@
             </div>
             <!-- Video 2 -->
             <div>
-                <video controls class="cache-bust">
+                <video controls>
                     <source src="vides/v2.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
@@ -325,7 +347,7 @@
             </div>
             <!-- Video 3 -->
             <div>
-                <video controls class="cache-bust">
+                <video controls>
                     <source src="vides/v3.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
@@ -338,7 +360,7 @@
     <section id="video">
         <h2>Watch Our Work</h2>
         <div class="video-thumbnail" onclick="playVideo(this)">
-            <img class="cache-bust" src="https://img.youtube.com/vi/AU4mQDrCpIs/maxresdefault.jpg" alt="Watch Our Work">
+            <img src="https://img.youtube.com/vi/AU4mQDrCpIs/maxresdefault.jpg" alt="Watch Our Work">
             <div class="play-button">&#9658;</div>
         </div>
     </section>
