@@ -51,7 +51,6 @@
             background: rgba(0, 0, 0, 0.5); /* Dark overlay for better text visibility */
         }
 
-        /* Added gradient overlay to transition to header */
         .hero::after {
             content: "";
             position: absolute;
@@ -79,13 +78,32 @@
             margin: 0 auto;
         }
 
+        /* Call Us Button */
+        .call-us-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: #13274F;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-size: 1rem;
+            z-index: 2;
+            transition: background 0.3s ease;
+        }
+
+        .call-us-button:hover {
+            background: #1c3a6e;
+        }
+
         /* Header Section */
         header {
-            position: relative; /* added for pseudo-element positioning */
+            position: relative;
             text-align: center;
             padding: 20px;
-            background: #13274F; /* navy blue background */
-            color: white; /* white text */
+            background: #13274F;
+            color: white;
             border-bottom: 1px solid #222;
         }
 
@@ -100,7 +118,7 @@
         }
 
         #profile-image {
-            width: 250px; /* increased size for better visibility */
+            width: 250px;
             height: 250px;
             border-radius: 50%;
             margin: 10px auto;
@@ -109,23 +127,36 @@
         .header-content h2 {
             font-size: 1.8rem;
             margin: 10px 0;
-            color: white; /* ensure header text is white */
+            color: white;
         }
 
         .header-content p {
             font-size: 1rem;
-            color: white; /* ensure header text is white */
+            color: white;
         }
 
-        /* Menu Button Changes */
-        #menu-button {
+        /* Navigation Buttons */
+        .nav-buttons {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+            padding: 20px;
+        }
+
+        .nav-buttons a {
+            background: #13274F;
             color: white;
-            background: transparent;
-            border: none; /* removed rectangle border */
-            padding: 10px 15px; /* bigger button */
-            font-size: 1.5rem;  /* increased size for better visibility */
-            font-weight: bold;  /* thicker appearance */
-            cursor: pointer;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+
+        .nav-buttons a:hover {
+            background: #1c3a6e;
+            transform: translateY(-3px);
         }
 
         /* Services and Projects Sections */
@@ -142,7 +173,7 @@
             overflow: hidden;
             text-align: center;
             padding: 10px;
-            background-colour: #f9f9f9;
+            background-color: #f9f9f9;
         }
 
         .services-grid img, .project-grid img, .project-grid video {
@@ -157,12 +188,6 @@
             margin: 10px 0 0;
             font-size: 16px;
             font-weight: bold;
-        }
-
-           /* Ensure videos and images don't overflow their containers */
-        video, img {
-            max-width: 100%;
-            height: auto;
         }
 
         /* Footer Section */
@@ -204,40 +229,18 @@
             .services-grid, .project-grid {
                 grid-template-columns: 1fr;
             }
-        }
 
-        /* Added modal styles for full image view */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 100;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0,0,0,0.9);
-        }
-        .modal-content {
-            margin: auto;
-            display: block;
-            width: 80%;
-            max-width: 700px;
-        }
-        .close {
-            position: absolute;
-            top: 15px;
-            right: 35px;
-            color: #f1f1f1;
-            font-size: 40px;
-            font-weight: bold;
-            cursor: pointer;
+            .nav-buttons {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+            }
         }
     </style>
 </head>
 <body>
     <!-- Hero Section -->
     <section class="hero">
+        <a href="tel:+254710593221" class="call-us-button">Call Us</a>
         <div class="hero-content">
             <h1>Good Isaac Home Concepts</h1>
             <p>Transforming spaces with exquisite designs and craftsmanship.</p>
@@ -251,10 +254,18 @@
             <h2>Good Isaac Home Concepts</h2>
             <p>Welcome to Good Isaac Home Concepts, we specialize in all types of exterior and interior finishes, design and installation of contemporary kitchen cabinets, wardrobes, office furniture.</p>
         </div>
-        <button id="menu-button">☰ Menu</button>
-        <div class="dropdown" id="dropdown-menu">
-            <a href="portfolio.html">Portfolio</a>
-            <a href="tel:+254710593221">Call Us</a>
+        <!-- Navigation Buttons -->
+        <div class="nav-buttons">
+            <a href="#services">Services</a>
+            <a href="#projects">Projects</a>
+            <a href="#video">Videos</a>
+            <a href="#about">About Us</a>
+            <a href="#contact">Contact</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#testimonials">Testimonials</a>
+            <a href="#blog">Blog</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#faq">FAQ</a>
         </div>
     </header>
 
@@ -339,30 +350,6 @@
         }
     </script>
 
-    <!-- Modal for full size image -->
-    <div id="imgModal" class="modal">
-        <span class="close" onclick="closeModal()">&times;</span>
-        <img class="modal-content" id="modalImg">
-    </div>
-
-    <script>
-        // Modal functions and image click event attachment
-        function openModal(src) {
-            var modal = document.getElementById("imgModal");
-            var modalImg = document.getElementById("modalImg");
-            modal.style.display = "block";
-            modalImg.src = src;
-        }
-        function closeModal() {
-            document.getElementById("imgModal").style.display = "none";
-        }
-        document.querySelectorAll('img.cache-bust').forEach(function(img) {
-            img.addEventListener('click', function() {
-                openModal(this.src);
-            });
-        });
-    </script>
-
     <!-- Footer Section -->
     <footer>
         <h3>Good Isaac Home Concepts</h3>
@@ -375,7 +362,5 @@
             <a href="https://www.tiktok.com/@user92493734966723?_t=ZM-8uDkAdjE53u&_r=1" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
         </p>
     </footer>
-
-    <script src="scripts_v4.js"></script>
 </body>
 </html>
