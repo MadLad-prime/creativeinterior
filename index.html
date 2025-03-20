@@ -151,6 +151,7 @@
             text-decoration: none;
             font-size: 1rem;
             transition: background 0.3s ease, transform 0.2s ease;
+            border: 2px solid #1c3a6e; /* Permanent border */
         }
 
         .nav-buttons a:hover {
@@ -221,13 +222,21 @@
         }
 
         footer a {
-            color: white;
             margin: 0 10px;
             font-size: 1.5rem;
         }
 
-        footer a:hover {
-            color: #f9f9f9;
+        /* Social Media Brand Colors */
+        .fa-facebook {
+            color: #1877F2; /* Facebook brand color */
+        }
+
+        .fa-instagram {
+            color: #E4405F; /* Instagram brand color */
+        }
+
+        .fa-tiktok {
+            color: #000000; /* TikTok brand color */
         }
 
         /* Mobile Responsiveness */
@@ -256,6 +265,11 @@
                 grid-template-columns: repeat(2, 1fr);
                 gap: 10px;
             }
+        }
+
+        /* Fix for Services Section Title */
+        #services {
+            padding-top: 40px; /* Move the title lower */
         }
     </style>
 </head>
