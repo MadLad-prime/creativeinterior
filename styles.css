@@ -6,29 +6,29 @@ body {
     box-sizing: border-box;
     background-color: #f4f4f4;
     color: #333;
-  }
-  
-  /* Hero Section */
-  .hero {
+}
+
+/* Hero Section */
+.hero {
     position: relative;
     height: 60vh;
-    background-image: url('https://via.placeholder.com/1200x400');
-    background-size: cover;
-    background-position: center;
+    background-image: url('gihc.png'); /* Just the path */
+    background-size: cover; /* Ensures the image covers the entire section */
+    background-position: center; /* Centers the image */
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     color: white;
-  }
-  
-  .hero-content {
+}
+
+.hero-content {
     background: rgba(0, 0, 0, 0.5);
     padding: 20px;
     border-radius: 10px;
-  }
-  
-  .cta-button {
+}
+
+.cta-button {
     position: absolute;
     top: 20px;
     right: 20px;
@@ -40,57 +40,57 @@ body {
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
-  }
-  
-  .cta-button:hover {
+}
+
+.cta-button:hover {
     background-color: #0056b3;
     transform: scale(1.05);
-  }
-  
-  /* Grid Container */
-  .grid-container {
+}
+
+/* Grid Container */
+.grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
     padding: 20px;
-  }
-  
-  .card {
+}
+
+.card {
     background: white;
     border: 1px solid #ddd;
     border-radius: 10px;
     overflow: hidden;
     transition: transform 0.3s ease;
-  }
-  
-  .card:hover {
+}
+
+.card:hover {
     transform: translateY(-5px);
-  }
-  
-  .card img {
+}
+
+.card img {
     width: 100%;
-    height: 200px;
-    object-fit: cover;
-  }
-  
-  .card-info {
+    height: 200px; /* Fixed height for images */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+}
+
+.card-info {
     padding: 15px;
     text-align: center;
-  }
-  
-  .card-info h3 {
+}
+
+.card-info h3 {
     margin: 0;
     font-size: 18px;
-  }
-  
-  .card-info p {
+}
+
+.card-info p {
     margin: 10px 0 0;
     font-size: 14px;
     color: #666;
-  }
-  
-  /* Modal Styles */
-  .modal {
+}
+
+/* Modal Styles */
+.modal {
     display: none;
     position: fixed;
     top: 0;
@@ -100,44 +100,44 @@ body {
     background: rgba(0, 0, 0, 0.5);
     justify-content: center;
     align-items: center;
-  }
-  
-  .modal-content {
+}
+
+.modal-content {
     background: white;
     padding: 20px;
     border-radius: 10px;
     width: 90%;
     max-width: 400px;
     text-align: center;
-  }
-  
-  .close {
+}
+
+.close {
     position: absolute;
     top: 10px;
     right: 10px;
     font-size: 24px;
     cursor: pointer;
-  }
-  
-  .contact-options {
+}
+
+.contact-options {
     margin: 15px 0;
-  }
-  
-  .contact-options label {
+}
+
+.contact-options label {
     display: block;
     margin: 10px 0;
-  }
-  
-  input[type="text"],
-  input[type="tel"] {
+}
+
+input[type="text"],
+input[type="tel"] {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
     border: 1px solid #ddd;
     border-radius: 5px;
-  }
-  
-  button[type="submit"] {
+}
+
+button[type="submit"] {
     padding: 10px 20px;
     background-color: #007bff;
     color: white;
@@ -145,24 +145,24 @@ body {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-  }
-  
-  button[type="submit"]:hover {
+}
+
+button[type="submit"]:hover {
     background-color: #0056b3;
-  }
-  
-  /* Mobile Compatibility */
-  @media (max-width: 768px) {
+}
+
+/* Mobile Compatibility */
+@media (max-width: 768px) {
     .hero {
-      height: 50vh;
+        height: 50vh;
     }
-  
+
     .cta-button {
-      font-size: 14px;
-      padding: 8px 16px;
+        font-size: 14px;
+        padding: 8px 16px;
     }
-  
+
     .grid-container {
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
-  }
+}
