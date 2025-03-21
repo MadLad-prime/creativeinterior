@@ -12,7 +12,8 @@
             margin: 0;
             padding: 0;
             line-height: 1.6;
-            color: #333;
+            color: #333; /* Body text color */
+            font-size: 16px; /* Base font size */
         }
 
         h1, h2, h3 {
@@ -24,6 +25,16 @@
             max-width: 100%;
             height: auto;
             display: block;
+        }
+
+        a {
+            color: #333; /* Default link color */
+            text-decoration: none; /* Remove underline */
+        }
+
+        a:hover {
+            color: #13274F; /* Hover color for links */
+            text-decoration: underline; /* Underline on hover */
         }
 
         /* Hero Section */
@@ -221,9 +232,14 @@
             color: white;
         }
 
+        footer p {
+            margin: 10px 0; /* Add spacing between paragraphs */
+        }
+
         footer a {
             margin: 0 10px;
             font-size: 1.5rem;
+            text-decoration: none; /* Remove underline */
         }
 
         /* Social Media Brand Colors */
@@ -237,6 +253,18 @@
 
         .fa-tiktok {
             color: #000000; /* TikTok brand color */
+        }
+
+        footer a:hover .fa-facebook {
+            color: #165bbf; /* Darker Facebook color on hover */
+        }
+
+        footer a:hover .fa-instagram {
+            color: #c13584; /* Darker Instagram color on hover */
+        }
+
+        footer a:hover .fa-tiktok {
+            color: #333; /* Darker TikTok color on hover */
         }
 
         /* Mobile Responsiveness */
